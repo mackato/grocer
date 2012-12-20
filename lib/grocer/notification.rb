@@ -32,7 +32,6 @@ module Grocer
     private
 
     def validate_payload
-      fail NoPayloadError unless alert || badge
     end
 
     def encoded_payload

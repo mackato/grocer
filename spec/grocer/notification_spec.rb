@@ -86,8 +86,8 @@ describe Grocer::Notification do
     context 'invalid payload' do
       let(:payload_options) { Hash.new }
 
-      it 'raises an error when neither alert nor badge is specified' do
-        -> { notification.to_bytes }.should raise_error(Grocer::NoPayloadError)
+      it 'raises no errors when neither alert nor badge is specified' do
+        -> { notification.to_bytes }.should_not raise_error(Grocer::NoPayloadError)
       end
     end
   end
